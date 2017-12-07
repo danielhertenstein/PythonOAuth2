@@ -2,8 +2,8 @@ from flask import Flask, url_for, session, request, jsonify
 from flask_oauthlib.client import OAuth
 
 
-CLIENT_ID = 'ldo7CtqmeIRGXhDEdj9vKvx8RW6k3piotQasj4WC'
-CLIENT_SECRET = 'BX0E3A3dU6J4lVuTYWpJSLEP17V60J8Wp5b3LgyAIFPHrHnd9f'
+CLIENT_ID = 'eiIek0alfhRjIz3PyVAjsW7mlaH1zI5IRlI6KKMs'
+CLIENT_SECRET = '3jqi5um8uHNtg2YKCyD7vhY6UvSWKqMYKcHnxGbhlnERTqV2zM'
 
 
 app = Flask(__name__)
@@ -18,8 +18,8 @@ remote = oauth.remote_app(
     request_token_params={'scope': 'email'},
     base_url='http://127.0.0.1:5000/api/',
     request_token_url=None,
-    access_token_url='http://127.0.0.1:5000/oauth/token',
-    authorize_url='http://127.0.0.1:5000/oauth/auth'
+    access_token_url='http://127.0.0.1:5000/token',
+    authorize_url='http://127.0.0.1:5000/auth'
 )
 
 

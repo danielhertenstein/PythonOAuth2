@@ -209,13 +209,13 @@ def save_token(token, request, *args, **kwargs):
     return tok
 
 
-@app.route('/oauth/token', methods=['GET', 'POST'])
+@app.route('/token', methods=['GET', 'POST'])
 @oauth.token_handler
 def access_token():
     return None
 
 
-@app.route('/oauth/auth', methods=['GET', 'POST'])
+@app.route('/auth', methods=['GET', 'POST'])
 @oauth.authorize_handler
 def authorize(*args, **kwargs):
     user = current_user()
